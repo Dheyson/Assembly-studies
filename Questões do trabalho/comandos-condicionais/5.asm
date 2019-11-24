@@ -1,10 +1,9 @@
-.data 
+.data 2
 	message: .ascii "O valor maior e: \n" 
 
 .text
 	main:
-	addi $t0, $zero, 15
-	addi $t1, $zero, 20
+	addi $t0, $zero, 3
 	
 	bgt $t1, $t0, printResult  
 	

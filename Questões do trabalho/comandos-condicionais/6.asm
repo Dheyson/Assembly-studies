@@ -1,5 +1,6 @@
 .data 
-	message: .ascii "O valor maior e: \n" 
+	message: .ascii "O valor maior e a sua subtracao  e: \n" 
+	jump : .ascii " \n"
 
 .text
 	main:
@@ -18,4 +19,12 @@
 	  
 	  li $v0, 1
 	  la $a0, ($t1)
+	  syscall
+	  
+	  li $v0, 4
+	  la $a0, jump
+	  syscall
+	  
+	  li $v0, 1
+	  sub $a0, $t1, $t0
 	  syscall
