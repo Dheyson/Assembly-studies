@@ -1,6 +1,6 @@
 .data
-	massage: .asciiz "FIM"
-	space: .asciiz", "
+	mensagem: .asciiz "FIM"
+	espaco: .asciiz", "
 .text
 
 	main:
@@ -15,10 +15,9 @@
 		exit:
 		
 			li $v0, 4
-			la $a0, massage
+			la $a0, mensagem
 			syscall
 			
-		#Final do Programa
 		li $v0, 10
 		syscall
 		
@@ -28,7 +27,7 @@
 			syscall
 			
 			li $v0, 4
-			la $a0, space
+			la $a0, espaco
 			syscall
 			
 			jr $ra
